@@ -27,8 +27,8 @@ e. Others
  ------------------------------------------------------------------ */
 
 @import url("#{resource['css/fonts.css']}");
-@import url("#{resource['css/fontello/css/fontello.css']}");
-@import url("#{resource['css/font-awesome/css/font-awesome.min.css']}");
+@import url("#{resource['fonts/fontello/css/fontello.css']}");
+@import url("#{resource['fonts/font-awesome/css/font-awesome.css']}");
 
 /* ------------------------------------------------------------------
 /* b. Reset
