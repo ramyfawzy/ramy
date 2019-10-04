@@ -61,7 +61,7 @@ public class HelloWorld implements Serializable {
 	}
 
 	public void writeContactMsg(ContactBean contactBean) throws IOException {
-		Path path = Paths.get("/home/msgs.txt");
+		Path path = Paths.get("/home/jboss/msgs.txt");
 		byte[] strToBytes = System.lineSeparator().concat(contactBean.toString()).getBytes();
 		Files.write(path, strToBytes, StandardOpenOption.APPEND);
 	}
