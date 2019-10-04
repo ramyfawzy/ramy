@@ -7,19 +7,11 @@
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 8)|!(IE)]><html class="no-js" lang="en"> <![endif]-->
 <h:head>
-<style>
-.ui-button-text-only .ui-button-text {
-    padding: .3em 1em;
-    line-height: unset !important;
-}
-
-
-</style>
 
    <!--- Basic Page Needs
    ================================================== -->
    <meta charset="utf-8"/>
-	<title>Ramy Ibrahim Resume</title>
+	<title>Ceevee - Free Responsive HTML5/CSS3 Template</title>
 	<meta name="description" content=""/>
 	<meta name="author" content=""/>
 
@@ -39,7 +31,7 @@
 	<h:outputScript library="js" name="modernizr.js" />
    <!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" type="image/x-icon" href="#{resource['images/favicon.png']}"/>
+	<link rel="shortcut icon" type="image/x-icon" href="#{resource['images/favicon.ico']}"/>
 
 </h:head>
 
@@ -50,9 +42,10 @@
    <header id="home">
 
       <nav id="nav-wrap">
+
          <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
 	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-		<h:form>
+
          <ul id="nav" class="nav">
             <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
             <li><a class="smoothscroll" href="#about">About</a></li>
@@ -61,7 +54,7 @@
             <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
             <li><a class="smoothscroll" href="#contact">Contact</a></li>
          </ul> <!-- end #nav -->
-		</h:form>
+
       </nav> <!-- end #nav-wrap -->
 
       <div class="row banner">
@@ -76,8 +69,8 @@
                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-               <li><a href="#"><i class="fa fa-xing"></i></a></li>
-               <li><a href="#"><i class="fa fa-github"></i></a></li>
+               <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+               <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                <li><a href="#"><i class="fa fa-skype"></i></a></li>
             </ul>
          </div>
@@ -126,13 +119,13 @@
 					   </p>
 
                </div>
-			   <h:form id="cvDownload">
+
                <div class="columns download">
                   <p>
-                     <p:commandLink icon="fa fa-download" action="#{helloWorld.download}" ajax="false" styleClass="button"><i class="fa fa-download"></i>Download Resume</p:commandLink>
+                     <a href="#" class="button"><i class="fa fa-download"></i>Download Resume</a>
                   </p>
                </div>
-				</h:form>
+
             </div> <!-- end row -->
 
          </div> <!-- end .main-col -->
@@ -247,12 +240,12 @@
 				<div class="bars">
 
 				   <ul class="skills">
-					   <li><span class="bar-expand photoshop"></span><em>Spring</em></li>
-                  <li><span class="bar-expand illustrator"></span><em>Hibernate</em></li>
-						<li><span class="bar-expand wordpress"></span><em>Maven</em></li>
-						<li><span class="bar-expand css"></span><em>Git</em></li>
-						<li><span class="bar-expand html5"></span><em>Docker</em></li>
-                  <li><span class="bar-expand jquery"></span><em>SQL</em></li>
+					   <li><span class="bar-expand photoshop"></span><em>Photoshop</em></li>
+                  <li><span class="bar-expand illustrator"></span><em>Illustrator</em></li>
+						<li><span class="bar-expand wordpress"></span><em>Wordpress</em></li>
+						<li><span class="bar-expand css"></span><em>CSS</em></li>
+						<li><span class="bar-expand html5"></span><em>HTML5</em></li>
+                  <li><span class="bar-expand jquery"></span><em>jQuery</em></li>
 					</ul>
 
 				</div><!-- end skill-bars -->
@@ -272,7 +265,7 @@
 
          <div class="twelve columns collapsed">
 
-            <h1>Check Out Some of The clients I worked for</h1>
+            <h1>Check Out Some of My Works.</h1>
 
             <!-- portfolio-wrapper -->
             <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
@@ -556,7 +549,7 @@
 
 
    <!-- Call-To-Action Section
-   
+   ================================================== -->
    <section id="call-to-action">
 
       <div class="row">
@@ -572,7 +565,7 @@
             <h2><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Host This Template on Dreamhost.</a></h2>
             <p>Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT"><span>DreamHost</span></a>.
 					Get <span>$50 off</span> when you sign up with the promocode <span>STYLESHOUT</span>. 
-					</p>
+					<!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. --></p>
 
          </div>
 
@@ -584,7 +577,7 @@
 
       </div>
 
-   </section>  Call-To-Action Section End-->
+   </section> <!-- Call-To-Action Section End-->
 
 
    <!-- Testimonials Section
@@ -609,33 +602,23 @@
 
                      <li>
                         <blockquote>
-                           <p>Ramy has played a key role in our setup, and he has been a great part of our offshore success. As a team leader 
-                           he has been my primary point of contact. He has been responsible for coordinating tasks with the other team members 
-                           as well as helping them find the right solutions.
+                           <p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is
+                           to do what you believe is great work. And the only way to do great work is to love what you do.
+                           If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
                            </p>
-                           <cite>Søren Christensen - IT Development Manager at Hydra-Grene A/S</cite>
+                           <cite>Steve Jobs</cite>
                         </blockquote>
                      </li> <!-- slide ends -->
 
                      <li>
                         <blockquote>
-                           <p>Ramy has deep understanding of technical topics and exceptional skills, he has impressed me with his ability to quickly learn new concepts and successfully apply them in his work.
-						   I therefore recommend Ramy as a highly capable individual who will definitely add a great value to any software development team.
+                           <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                           Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                           nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
                            </p>
-                           <cite>Ahmed Eid - Solutions Architect at Accenture</cite>
+                           <cite>Mr. Adobe</cite>
                         </blockquote>
                      </li> <!-- slide ends -->
-                     
-                     <li>
-                        <blockquote>
-                           <p>I worked with Ramy implementing several important projects. Ramy is helpful fast learner. He can manage to learn and implement new technologies. 
-                           He also has a very good spirit as a team worker. It was a real privilege to co-operate with him.
-                           </p>
-                           <cite>Belal El-Berry - ECM Architect at IBM</cite>
-                        </blockquote>
-                     </li> <!-- slide ends -->
-                     
-                     
 
                   </ul>
 
@@ -678,38 +661,38 @@
             <div class="eight columns">
 
                <!-- form -->
-               <h:form id="contactForm" name="contactForm">
+               <form action="" method="post" id="contactForm" name="contactForm">
 					<fieldset>
 
                   <div>
 						   <label for="contactName">Name <span class="required">*</span></label>
-						   <h:inputText value="#{contactBean.name}" size="35" id="contactName" name="contactName"/>
+						   <input type="text" value="" size="35" id="contactName" name="contactName" />
                   </div>
 
                   <div>
 						   <label for="contactEmail">Email <span class="required">*</span></label>
-						   <h:inputText value="#{contactBean.email}" size="35" id="contactEmail" name="contactEmail"/>
+						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail" />
                   </div>
 
                   <div>
 						   <label for="contactSubject">Subject</label>
-						    <h:inputText value="#{contactBean.subject}" size="35" id="contactSubject" name="contactSubject"/>
+						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject" />
                   </div>
 
                   <div>
                      <label for="contactMessage">Message <span class="required">*</span></label>
-                     <h:inputTextarea value="#{contactBean.message}" cols="50" rows="15" id="contactMessage" name="contactMessage"/>
+                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
                   </div>
 
                   <div>
-                     <p:commandButton id="contactButton" value="Submit" action="#{helloWorld.writeContactMsg(contactBean)}" styleClass="submit"/>
+                     <button class="submit">Submit</button>
                      <span id="image-loader">
                         <h:graphicImage alt="" library="images" name="loader.gif" />
                      </span>
                   </div>
 
 					</fieldset>
-				   </h:form> <!-- Form End -->
+				   </form> <!-- Form End -->
 
                <!-- contact-warning -->
                <div id="message-warning"> Error boy</div>
@@ -727,10 +710,10 @@
 
 					   <h4>Address and Phone</h4>
 					   <p class="address">
-						   Ramy Ibrahim<br/>
-						   Eilbek <br/>
-						   Eilbek, Hamburg 22089 Germany<br/>
-						   <span>(+49) 017-44567-035</span>
+						   Jonathan Doe<br/>
+						   1600 Amphitheatre Parkway <br/>
+						   Mountain View, CA 94043 US<br/>
+						   <span>(123) 456-7890</span>
 					   </p>
 
 				   </div>
@@ -786,7 +769,7 @@
             </ul>
 
             <ul class="copyright">
-               <li> Copyright 2020</li>
+               <li> Copyright 2014 CeeVee</li>
                <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>   
             </ul>
 

@@ -21,8 +21,7 @@
 		<wildfly-maven-plugin.version>2.0.1.Final</wildfly-maven-plugin.version>
 	</properties>
 
-	<!-- <repositories>
-
+	<repositories>
 		<repository>
 			<id>prime-repo</id>
 			<name>PrimeFaces Maven Repository</name>
@@ -30,7 +29,7 @@
 			<layout>default</layout>
 		</repository>
 
-	</repositories> -->
+	</repositories>
 
 
 	<dependencies>
@@ -60,6 +59,32 @@
 			<artifactId>primefaces</artifactId>
 			<version>${primefaces.version}</version>
 		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.enterprise/cdi-api -->
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.jboss.spec.javax.annotation/jboss-annotations-api_1.2_spec -->
+		<dependency>
+			<groupId>org.jboss.spec.javax.annotation</groupId>
+			<artifactId>jboss-annotations-api_1.3_spec</artifactId>
+			<version>1.0.1.Final</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.primefaces.themes/bootstrap -->
+		<dependency>
+			<groupId>org.primefaces.themes</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>1.0.10</version>
+		</dependency>
+
+
+
 	</dependencies>
 
 	<build>
