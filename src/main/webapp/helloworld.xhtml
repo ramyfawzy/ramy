@@ -1,11 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:jsf="http://xmlns.jcp.org/jsf"
-	xmlns:p="http://primefaces.org/ui" class="no-js" lang="en">
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><html class="no-js" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions"
+	 class="no-js" lang="en"><!--<![endif]-->
 <h:head>
 <meta name="google-site-verification" content="rbfH8v2Aq8pEMikEw4uoQT8dQ3lq2y1U1Vng2KrnhtQ" />
 <style>
@@ -49,11 +56,11 @@
    <!-- Header
    ================================================== -->
    <header id="home">
-
-      <nav id="nav-wrap">
+      <!-- <nav id="nav-wrap"> -->
+      <h:panelGroup id="nav-wrap" layout="block">
          <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
 	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-		<h:form>
+		<!-- <h:form> -->
          <ul id="nav" class="nav">
             <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
             <li><a class="smoothscroll" href="#about">About</a></li>
@@ -62,8 +69,9 @@
             <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
             <li><a class="smoothscroll" href="#contact">Contact</a></li>
          </ul> <!-- end #nav -->
-		</h:form>
-      </nav> <!-- end #nav-wrap -->
+		<!-- </h:form> -->
+		</h:panelGroup>
+      <!-- </nav> --> <!-- end #nav-wrap -->
 
       <div class="row banner">
          <div class="banner-text">
@@ -127,10 +135,12 @@
 					   </p>
 
                </div>
-			   <h:form id="cvDownload">
+			   <h:form >
                <div class="columns download">
                   <p>
-                     <p:commandLink icon="fa fa-download" action="#{helloWorld.download}" ajax="false" styleClass="button"><i class="fa fa-download"></i>Download Resume</p:commandLink>
+                     <p:commandLink icon="fa fa-download" ajax="false" styleClass="button"><i class="fa fa-download"></i>Download Resume
+        				<p:fileDownload value="#{contactBean.file}" />
+    				 </p:commandLink>
                   </p>
                </div>
 				</h:form>
@@ -183,7 +193,7 @@
       <div class="row work">
 
          <div class="three columns header-col">
-            <h1><span>Work</span></h1>
+            <h1><span>Experience</span></h1>
          </div>
 
          <div class="nine columns main-col">
@@ -192,8 +202,25 @@
 
                <div class="twelve columns">
 
-                  <h3>Awesome Design Studio</h3>
-                  <p class="info">Senior UX Designer <em class="date">March 2010 - Present</em></p>
+                  <h3>Bigpoint Gmbh – Hamburg, Germany</h3>
+                  <p class="info">Senior Java Developer <em class="date">Feb 2019 - Present</em></p>
+                  <h4>Duties</h4>
+                  <ul class="fa-ul">
+					  <li><span class="fa-li"><i class="fa fa-check"></i></span>Implement new game features.</li>
+					  <li><span class="fa-li"><i class="fa fa-check"></i></span>Fix live game bugs.</li>
+					  <li><span class="fa-li"><i class="fa fa-check"></i></span>Investigate exploits and find ways to prevent its usage.</li>
+					  <li><span class="fa-li"><i class="fa fa-check"></i></span>Evaluate game designers requirements and perform feasibility checks.</li>
+				  </ul>
+				  <h4>Technologies</h4>
+                  <ul class="fa-ul">
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>Java 11</li>
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>Maven</li>
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>Google Guice</li>
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>Git</li>
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>MySQL</li>
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>Liquibase</li>
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>Jenkins</li>
+				  </ul>
 
                   <p>
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
@@ -206,6 +233,95 @@
 
             </div> <!-- item end -->
 
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Gamigo AG – Hamburg, Germany</h3>
+                  <p class="info">Senior Java Developer <em class="date">Nov 2017 - Feb 2019</em></p>
+                  <h4>Duties</h4>
+                  <ul class="fa-ul">
+					  <li><span class="fa-li"><i class="fa fa-check"></i></span>Maintain and add feature to the core web services API.</li>
+					  <li><span class="fa-li"><i class="fa fa-check"></i></span>Develop batch applications to process millions of critical user data.</li>
+					  <li><span class="fa-li"><i class="fa fa-check"></i></span>Migrate several apps to Google Cloud Platform.</li>
+					  <li><span class="fa-li"><i class="fa fa-check"></i></span>Investigate server lags and optimize code accordingly.</li>
+				  </ul>
+				  <h4>Technologies</h4>
+                  <ul class="fa-ul">
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>SOAP</li>
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>Apache CXF</li>
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>Spring Integration</li>
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>Git</li>
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>MySQL</li>
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>ActiveMQ</li>
+					  <li><span class="fa-li"><i class="fa fa-terminal"></i></span>Google Cloud Platform</li>
+				  </ul>
+
+                  <p>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                  Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                  ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+            
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Super Cool Studio</h3>
+                  <p class="info">UX Designer   <em class="date">March 2007 - February 2010</em></p>
+
+                  <p>
+                  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
+                  ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+            
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Super Cool Studio</h3>
+                  <p class="info">UX Designer   <em class="date">March 2007 - February 2010</em></p>
+
+                  <p>
+                  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
+                  ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+            
+            <div class="row item">
+
+               <div class="twelve columns">
+
+                  <h3>Super Cool Studio</h3>
+                  <p class="info">UX Designer   <em class="date">March 2007 - February 2010</em></p>
+
+                  <p>
+                  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
+                  ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
+                  </p>
+
+               </div>
+
+            </div> <!-- item end -->
+            
             <div class="row item">
 
                <div class="twelve columns">
@@ -705,7 +821,7 @@
                   <div>
                      <p:commandButton id="contactButton" value="Submit" action="#{helloWorld.writeContactMsg(contactBean)}" styleClass="submit"/>
                      <span id="image-loader">
-                        <h:graphicImage alt="" library="images" name="loader.gif" />
+                        <h:graphicImage alt="" library="images" name="loader.gif" style="width: 23px; height: 23px;"/>
                      </span>
                   </div>
 
@@ -800,16 +916,15 @@
    </footer> <!-- Footer End-->
 
    <!-- Java Script
-   ================================================== 
-   <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>-->
-   <h:outputScript library="js" name="jquery-1.10.2.min.js" />
-   <h:outputScript library="js" name="jquery-migrate-1.2.1.min.js" />
-
+   ================================================== -->
+   <script>window.jQuery || document.write('<h:outputScript library="primefaces" name="jquery/jquery.js"/>')</script>
 	<h:outputScript library="js" name="jquery.flexslider.js" />
-	<h:outputScript library="js" name="waypoints.js" />
 	<h:outputScript library="js" name="jquery.fittext.js" />
 	<h:outputScript library="js" name="magnific-popup.js" />
 	<h:outputScript library="js" name="init.js" />
+	 <pe:waypoint id="waypoint1" for="nav-wrap">  
+    	<pe:javascript event="reached" execute="$(ext.waypoint).toggleClass('sticky', ext.direction === 'down');"/>  
+	</pe:waypoint> 
 </h:body>
 
 </html>

@@ -1,21 +1,18 @@
 package com.resume;
 
-import java.io.IOException;
+import java.io.InputStream;
 import java.io.Serializable;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
 import java.util.Date;
 
 import javax.annotation.PostConstruct;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
-//import javax.faces.bean.ManagedBean;
-//import javax.faces.bean.ViewScoped;
-import javax.inject.*;
+import javax.inject.Named;
+
+import org.primefaces.model.DefaultStreamedContent;
+import org.primefaces.model.StreamedContent;
 
 @Named
 @ViewScoped
@@ -27,6 +24,15 @@ public class ContactBean implements Serializable {
 	private String email ;
 	private String subject ;
 	private String message ;
+	
+	private StreamedContent file;
+	
+	@PostConstruct
+	public void init() {
+		ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+		InputStream stream = ec.getResourceAsStream("/resources/images/RamyIbrahim.pdf");
+		file = new DefaultStreamedContent(stream, "application/pdf", "RamyIbrahim.pdf");
+	}
 
 	public ContactBean() {
 	}
@@ -69,6 +75,10 @@ public class ContactBean implements Serializable {
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+
+	public StreamedContent getFile() {
+		return file;
 	}
 
 	@Override

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html  
+	xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pretty="http://ocpsoft.com/prettyfaces"
+    xmlns:o="http://omnifaces.org/ui"
+	xmlns:of="http://omnifaces.org/functions" lang="en">
+
+   <h:head>
+	
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <style>
+    
+    .ui-widget, .ui-widget .ui-widget {
+	    font-size: 95% !important;
+	}
+    
+    .ui-selectonemenu .ui-selectonemenu-label {
+    	width: 104% !important;
+    }
+    
+    </style>
+    <script type="text/javascript">
+    //<![CDATA[
+		function start() {
+		    PF('statusDialog').show();
+		}
+		 
+		function stop() {
+		    PF('statusDialog').hide();
+		}
+    //]]>
+	</script>
+    <!-- <h:outputStylesheet name="css/main.css" /> -->
+  	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/> -->
+  	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> -->
+    <link rel="shortcut icon" type="image/x-icon" href="#{resource['images/favicon.ico']}"/>
+    <title>Downloads Tracker</title>
+    <!-- Custom styles for this template -->
+    
+  </h:head>
+  <h:body>
+	<div class="container-fluid" >
+	<p:dialog modal="true" widgetVar="statusDialog" header="Status" draggable="false" closable="false" resizable="false">
+    	<p:graphicImage name="images/ajaxloadingbar.gif" />
+	</p:dialog>
+    <h:form>
+		 <h1>#{helloWorld.firstName}</h1>
+        <!-- <div style="clear:both" /> -->
+        <p:commandButton value="Download" ajax="false" icon="fa fa-arrow-down">
+        	<p:fileDownload value="#{contactBean.file}" />
+    	</p:commandButton>
+    </h:form>
+	</div>
+	
+  </h:body>
+</html>

@@ -50,6 +50,11 @@
 		<extension>eot</extension>
 		<mime-type>application/vnd.ms-fontobject</mime-type>
 	</mime-mapping>
+	
+	<mime-mapping>
+		<extension>pdf</extension>
+		<mime-type>application/pdf</mime-type>
+	</mime-mapping>
 
 	<mime-mapping>
 		<extension>otf</extension>

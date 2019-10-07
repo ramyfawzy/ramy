@@ -10,34 +10,22 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
-import javax.annotation.PostConstruct;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
-//import javax.faces.bean.ManagedBean;
-//import javax.faces.bean.ViewScoped;
-import javax.inject.*;
+import javax.inject.Named;
 import javax.servlet.http.HttpServletResponse;
 
 @Named
 @ViewScoped
 public class HelloWorld implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	private String firstName = "Ramy Ibrahim";
 	private String lastName = "Doe";
 
-	@PostConstruct
-	public void init() {
-		System.out.println("@PostConstruct");
-	}
-
 	public HelloWorld() {
-		System.out.println("Constructor");
 	}
 
 	public String getFirstName() {
